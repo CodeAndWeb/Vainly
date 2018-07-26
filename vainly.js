@@ -35,5 +35,5 @@ function onEvent() {
 }
 
 function startLevel() {
-    this.scene.start("Level");  
+    this.scene.start("Level");
 }
