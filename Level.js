@@ -4,7 +4,8 @@ class Level extends Phaser.Scene {
     }
 
     preload () {
-        this.load.multiatlas('sprites', 'assets/json/sprites.json', 'assets');
+        this.load.multiatlas('sprites', 'assets/sprites.json', 'assets');
+
         this.load.image('bg', 'assets/bg.jpg');
         this.load.image('trail', 'assets/particles/trail.png');
 
@@ -14,7 +15,7 @@ class Level extends Phaser.Scene {
     }
 
     addSprite(x,y,atlas,name,shape) {
-        var s = this.matter.add.sprite(0, 0, atlas, name, shape);
+        var s = this.matter.add.sprite(0, 0, atlas, name+".png", shape);
         s.setPosition(x + s.centerOfMass.x, y + s.centerOfMass.y);
         return s;
     }
